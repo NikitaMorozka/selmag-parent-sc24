@@ -203,7 +203,7 @@ cd manager-app && mvn spring-boot:run
 
 ## 👨‍💻 Автор
 
-**Nikita** - [GitHub](https://github.com/your-username)
+**Nikita** - [GitHub](https://github.com/NikitaMorozka)
 
 ---
 

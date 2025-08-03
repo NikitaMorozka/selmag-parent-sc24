@@ -10,9 +10,13 @@ import org.springframework.web.client.RestClient;
 public class ClientConfigBeans {
 
     @Bean
-    public RestClientProductsRestClientImpl productsRestClient(@Value("${selmag.services.catalogue.uri:http://localhost:8081}") String catalogueBaseUri) {
+    public RestClientProductsRestClientImpl productsRestClient(
+            @Value("${selmag.services.catalogue.uri:http://localhost:8081}") String catalogueBaseUri,
+            @Value("${selmag.services.catalogue.username:}") String catalogueUsername,
+            @Value("${selmag.services.catalogue.password:}") String cataloguePassword) {
         return new RestClientProductsRestClientImpl(RestClient.builder()
                 .baseUrl(catalogueBaseUri)
+                .defaultHeaders(headers -> headers.setBasicAuth(catalogueUsername, cataloguePassword))
                 .build());
 
     }

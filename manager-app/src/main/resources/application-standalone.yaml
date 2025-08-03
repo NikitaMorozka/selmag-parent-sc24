@@ -1,0 +1,6 @@
+selmag:
+  services:
+   catalogue:
+       uri: http://localhost:8081
+       username: service_user
+       password: password
