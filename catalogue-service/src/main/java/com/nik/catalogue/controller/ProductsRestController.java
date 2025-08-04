@@ -5,7 +5,6 @@ import com.nik.catalogue.entity.Product;
 import com.nik.catalogue.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -21,7 +20,6 @@ import java.util.Map;
 public class ProductsRestController {
 
     private final ProductService productService;
-    private final MessageSource messageSource;
 
     @GetMapping
     public List<Product> findProducts(@RequestParam(name = "filter", required = false) String filter) {

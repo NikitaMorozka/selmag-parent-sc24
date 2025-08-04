@@ -6,6 +6,7 @@ import com.nik.manager.controller.payload.NewProductPayload;
 import com.nik.manager.entity.Product;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 @RequestMapping("catalogue/products")
+@Slf4j
 public class ProductsController {
 
     private final ProductsRestClient productsRestClient;
