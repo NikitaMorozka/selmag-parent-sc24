@@ -6,5 +6,8 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
 
     <include file="db/changelog/changes/v24_1_1__Basic_schema.sql"/>
+    <include file="/db/changelog/changes/t_authority.sql"/>
+    <include file="/db/changelog/changes/t_user.sql"/>
+    <include file="/db/changelog/changes/t_user_authority.sql"/>
 
 </databaseChangeLog>

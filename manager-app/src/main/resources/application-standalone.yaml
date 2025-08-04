@@ -1,6 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/manager
+    username: manager
+    password: manager
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    show-sql: true
+
 selmag:
   services:
    catalogue:
        uri: http://localhost:8081
        username: service_user
        password: password
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    sql: info

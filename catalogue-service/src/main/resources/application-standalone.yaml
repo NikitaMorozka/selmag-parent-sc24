@@ -5,9 +5,6 @@ spring:
       password: '{noop}password'
       roles:
         - SERVICE
-
-
-
   datasource:
     url: jdbc:postgresql://localhost:5432/catalogue
     username: catalogue
