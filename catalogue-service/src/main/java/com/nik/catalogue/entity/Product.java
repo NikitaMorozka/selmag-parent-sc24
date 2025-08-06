@@ -2,10 +2,7 @@ package com.nik.catalogue.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -17,6 +14,7 @@ import lombok.Setter;
         @NamedQuery(name = "Product.findAllByTitleLikeIgnoringCase",
         query = "select p from Product p where p.title ilike :filter")
 )
+@EqualsAndHashCode
 public class Product {
 
     @Id
